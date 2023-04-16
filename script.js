@@ -31,7 +31,7 @@ const game = () => {
       option.addEventListener("click", function () {
         const winner = document.querySelector(".winner");
         //Default winner
-        winner.textContent = "";
+        winner.textContent = "Loading...";
         //Default images
         playerHand.src =
           "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/rock.png?v=1681602623805";
