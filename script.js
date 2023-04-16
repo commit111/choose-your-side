@@ -38,12 +38,12 @@ const game = () => {
           "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/rock.png?v=1681602623805";
         computerHand.src =
           "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/rock.png?v=1681602623805";
-       
+
         //Freeze options upon click
         buttons.forEach((button) => {
-          button.style.pointerEvents= "none";
+          button.style.pointerEvents = "none";
         });
-        
+
         //Computer choice
         const computerNumber = Math.floor(Math.random() * 3);
         const computerChoice = computerOptions[computerNumber];
@@ -76,9 +76,8 @@ const game = () => {
           }
           //Unfreeze options so you can click
           buttons.forEach((button) => {
-            button.style.pointerEvents= "all";
+            button.style.pointerEvents = "all";
           });
-          
         }, 2000);
 
         //Animation
