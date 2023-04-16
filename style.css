@@ -7,7 +7,8 @@ section {
   height: 100vh;
   /*background-color: rgb(196, 179, 175); beige */
   /*background-color: rgba(166, 81, 81); red */
-  background-color: #028090;
+  /*background-color: #028090; teal */
+  background: radial-gradient(rgba(25,60,126,1),rgba(2,128,144,1));
   font-family: "Roboto Slab", serif;
 }
 .score {
@@ -48,7 +49,8 @@ section {
   font-size: 1.5rem;
   font-family: "Roboto Slab", serif;
   /*background-color: rgb(44, 128, 87); green*/
-  background-color: #0A4F54;
+  /*background-color: #0A4F54; dark teal*/
+  background: #0D2B4D;
   border-radius: 0.4rem;
   cursor: pointer;
 }
