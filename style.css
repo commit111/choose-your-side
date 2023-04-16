@@ -10,7 +10,7 @@ section {
   /*background-color: #028090; teal */
   /*background: linear-gradient(rgba(2,128,144,1), rgba(25,60,126,1));*/
   background: radial-gradient(circle, rgba(19,167,73,1), rgba(166,81,255,1));
-  font-family: "Roboto Slab", serif;
+  font-family: "Rajdhani", serif;
 }
 .score {
   color: rgb(227, 225, 225);
@@ -38,7 +38,7 @@ section {
   transition: opacity 0.5s ease;
 }
 .intro h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 .match button,
 .intro button {
@@ -48,7 +48,7 @@ section {
   border: none; /*2px solid rgb(11, 75, 31) dark green*/
   color: rgb(227, 225, 225);
   font-size: 1.5rem;
-  font-family: "Roboto Slab", serif;
+  font-family: "Rajdhani", serif;
   /*background-color: rgb(44, 128, 87); green*/
   /*background-color: #0A4F54; dark teal*/
   background: rgb(27,27,27,0.9);
@@ -65,7 +65,7 @@ section {
 .winner {
   color: rgb(227, 225, 225);
   text-align: center;
-  font-size: 2.7rem;
+  font-size: 3rem;
 }
 .hands,
 .options {
