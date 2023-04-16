@@ -17,40 +17,64 @@ const game = () => {
     const options = document.querySelectorAll(".options button");
     const playerHand = document.querySelector(".player-hand");
     const computerHand = document.querySelector(".computer-hand");
+    const hands = document.querySelectorAll(".hands img");
+    hands.forEach((hand) => {
+      hand.addEventListener("animationend", function () {
+        this.style.animation = "";
+      });
+    });
 
     //Computer's options
     const computerOptions = ["rock", "paper", "scissors"];
 
     options.forEach((option) => {
       option.addEventListener("click", function () {
+        const winner = document.querySelector(".winner");
+        //Default winner
+        winner.textContent = "";
+        //Default images
+        playerHand.src =
+          "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/rock.png?v=1681602623805";
+        computerHand.src =
+          "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/rock.png?v=1681602623805";
+
         //Computer choice
         const computerNumber = Math.floor(Math.random() * 3);
         const computerChoice = computerOptions[computerNumber];
         console.log(computerChoice);
-        //Here is where we compare hands
-        compareHands(this.textContent, computerChoice);
 
-        //Update images
-        if (this.textContent === "rock") {
-          playerHand.src =
-            "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/rock.png?v=1681602623805";
-        } else if (this.textContent === "paper") {
-          playerHand.src =
-            "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/paper.png?v=1681602621719";
-        } else {
-          playerHand.src =
-            "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/scissors.png?v=1681602626712";
-        }
-        if (computerChoice === "rock") {
-          computerHand.src =
-            "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/rock.png?v=1681602623805";
-        } else if (computerChoice === "paper") {
-          computerHand.src =
-            "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/paper.png?v=1681602621719";
-        } else {
-          computerHand.src =
-            "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/scissors.png?v=1681602626712";
-        }
+        setTimeout(() => {
+          //---
+          //Here is where we compare hands
+          compareHands(this.textContent, computerChoice);
+
+          //Update images
+          if (this.textContent === "rock") {
+            playerHand.src =
+              "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/rock.png?v=1681602623805";
+          } else if (this.textContent === "paper") {
+            playerHand.src =
+              "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/paper.png?v=1681602621719";
+          } else {
+            playerHand.src =
+              "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/scissors.png?v=1681602626712";
+          }
+          if (computerChoice === "rock") {
+            computerHand.src =
+              "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/rock.png?v=1681602623805";
+          } else if (computerChoice === "paper") {
+            computerHand.src =
+              "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/paper.png?v=1681602621719";
+          } else {
+            computerHand.src =
+              "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/scissors.png?v=1681602626712";
+          }
+          //---
+        }, 2000);
+
+        //Animation
+        playerHand.style.animation = "shakePlayer 2s ease";
+        computerHand.style.animation = "shakeComputer 2s ease";
       });
     });
   };
