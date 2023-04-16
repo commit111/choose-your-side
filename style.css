@@ -79,3 +79,51 @@ div.fadeIn{
   opacity: 1;
   pointer-events: all;
 }
+@keyframes shakePlayer{
+  0%{
+    transform: rotateY(180deg) translateY(0px);
+  }
+  30% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  44% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  58% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  72% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  86% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  100%{
+    transform: rotateY(180deg) translateY(0px);
+  }
+}
+
+@keyframes shakeComputer {
+
+  0% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(-50px);
+  }
+  44% {
+    transform: translateY(0px);
+  }
+  58% {
+    transform: translateY(-50px);
+  }
+  72% {
+    transform: translateY(0px);
+  }
+  86% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
