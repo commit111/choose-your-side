@@ -16,7 +16,7 @@ const game = () => {
   const playMatch = () => {
     const options = document.querySelectorAll(".options button");
     const playerHand = document.querySelector(".player-hand");
-    const conputerHand = document.querySelector(".computer-hand");
+    const computerHand = document.querySelector(".computer-hand");
 
     //Computer's options
     const computerOptions = ["rock", "paper", "scissors"];
@@ -26,7 +26,33 @@ const game = () => {
         //Computer choice
         const computerNumber = Math.floor(Math.random() * 3);
         const computerChoice = computerOptions[computerNumber];
+        console.log(computerChoice);
         //Here is where we compare hands
+        compareHands();
+
+        //Update images
+        if (this === "rock") {
+          playerHand.src =
+            "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/rock.png?v=1681602623805";
+        } else if (this === "paper") {
+          playerHand.src =
+            "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/paper.png?v=1681602621719";
+        } else {
+          playerHand.src =
+            "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/scissors.png?v=1681602626712";
+        }
+        if (computerChoice === "rock") {
+          computerHand.src =
+            "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/rock.png?v=1681602623805";
+        } else if (computerChoice === "paper") {
+          computerHand.src =
+            "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/paper.png?v=1681602621719";
+        } else {
+          computerHand.src =
+            "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/scissors.png?v=1681602626712";
+        }
+        
+        
       });
     });
   };
