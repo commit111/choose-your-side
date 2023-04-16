@@ -30,6 +30,7 @@ const game = () => {
     options.forEach((option) => {
       option.addEventListener("click", function () {
         const winner = document.querySelector(".winner");
+        const buttons = document.querySelectorAll(".options button");
         //Default winner
         winner.textContent = "Loading...";
         //Default images
@@ -37,14 +38,18 @@ const game = () => {
           "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/rock.png?v=1681602623805";
         computerHand.src =
           "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/rock.png?v=1681602623805";
-
+       
+        //Freeze options upon click
+        buttons.forEach((button) => {
+          button.style.pointerEvents= "none";
+        });
+        
         //Computer choice
         const computerNumber = Math.floor(Math.random() * 3);
         const computerChoice = computerOptions[computerNumber];
         console.log(computerChoice);
 
         setTimeout(() => {
-          //---
           //Here is where we compare hands
           compareHands(this.textContent, computerChoice);
 
@@ -69,7 +74,11 @@ const game = () => {
             computerHand.src =
               "https://cdn.glitch.global/361f528c-ba2e-4ccd-bc33-065e834d1b81/scissors.png?v=1681602626712";
           }
-          //---
+          //Unfreeze options so you can click
+          buttons.forEach((button) => {
+            button.style.pointerEvents= "all";
+          });
+          
         }, 2000);
 
         //Animation
