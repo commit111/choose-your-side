@@ -5,8 +5,9 @@ body{
 }
 section{
   height: 100vh;
-  /*background-color: rgb(196, 179, 175);*/
-  background-color: rgba(166, 81, 81);
+  /*background-color: rgb(196, 179, 175); beige */
+  /*background-color: rgba(166, 81, 81); red */
+  background-color: #028090;
   font-family: "Roboto Slab", serif;
 }
 .score{
@@ -42,11 +43,12 @@ section{
   width: 150px;
   height: 50px;
   background: none;
-  border: 2px solid rgb(11, 75, 31);
+  border: 2px solid rgb(227, 225, 225); /*rgb(11, 75, 31) dark green*/
   color: rgb(227, 225, 225);
   font-size: 1.35rem;
   font-family: "Roboto Slab", serif;
-  background-color: rgb(44, 128, 87);
+  /*background-color: rgb(44, 128, 87); green*/
+  background-color: #114D51;
   border-radius: 0.4rem;
   cursor: pointer;
 }
