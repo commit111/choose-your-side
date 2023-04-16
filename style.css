@@ -8,7 +8,7 @@ section {
   /*background-color: rgb(196, 179, 175); beige */
   /*background-color: rgba(166, 81, 81); red */
   /*background-color: #028090; teal */
-  background: radial-gradient(rgba(25,60,126,1),rgba(2,128,144,1));
+  background: linear-gradient(rgba(2,128,144,1), rgba(25,60,126,1));
   font-family: "Roboto Slab", serif;
 }
 .score {
