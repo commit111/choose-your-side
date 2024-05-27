@@ -1,4 +1,6 @@
-# Rock Paper Scissors Online! 
+# Choose Your Side!
+## Rock, Paper, Scissors. 
+<br>
 
 Reference: https://www.youtube.com/watch?v=qWPtKtYEsN4 
 
